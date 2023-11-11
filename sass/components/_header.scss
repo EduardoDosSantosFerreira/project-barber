@@ -1,0 +1,128 @@
+.header {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 767px) {
+        padding-top: 40px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        padding-top: 32px;
+    }
+}
+
+.logo {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-right: 50px;
+    }
+    @media screen and (min-width: 1200px) {
+        margin-top: 32px;
+        margin-right: 131px;
+        margin-bottom: 32px;
+    }
+}
+
+.logo-icon {
+    width: 68px;
+    height: 55px;
+    fill: $whiteColor;
+
+    @media screen and (min-width: 768px) {
+        fill: $primaryTextColor;
+    }
+}
+
+.navigation {
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-left: 20px;
+    }
+}
+
+.navigation__list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 16px;
+
+    @media screen and (min-width: 1200px) {
+        gap: 30px;
+    }
+}
+
+.navigation__link {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+    color: $whiteColor;
+    transition: color $duration $timingFunction;
+
+    &:hover,
+    &:focus {
+        color: $accentColor;
+    }
+}
+
+.header__wrap {
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 20px;
+    padding-right: 20px;
+
+    @media screen and (min-width: 1200px) {
+        margin-left: auto;
+        flex-wrap: nowrap;
+        gap: 40px;
+        align-items: center;
+        flex-direction: row-reverse;
+    }
+}
+
+.header__phone {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $whiteColor;
+    transition: color $duration $timingFunction;
+
+    &:hover,
+    &:focus {
+        color: $accentColor;
+    }
+}
+
+.open-mobile-menu {
+    margin-left: auto;
+    background-color: transparent;
+    border: none;
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.icon-mobile-menu {
+    @media screen and (min-width: 768px) {
+        display: none;
+    }    
+}
+
+.icon-mobile-menu--open {
+    fill: $whiteColor;
+}

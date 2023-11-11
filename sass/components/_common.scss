@@ -1,0 +1,90 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 1.36;
+    color: $primaryTextColor;
+}
+
+.button {
+    min-width: 160px;
+    height: 40px;
+    padding: 12px 20px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    border: 1px solid $accentColor;
+    border-radius: 25px;
+    color: $whiteColor;
+    background-color: transparent;
+    transition: background-color $duration $timingFunction;
+
+    &:hover,
+    &:focus {
+        background-color: $accentColor;
+    }
+}
+
+.button--black-theme {
+    color: $primaryTextColor;
+    transition: color $duration $timingFunction;
+
+    &:hover,
+    &:focus {
+        color: $whiteColor;
+    }
+}
+
+.hero__subtitle,
+.about__subtitle,
+.services__subtitle,
+.benefits__subtitle,
+.team__subtitle,
+.gallery__subtitle,
+.contacts__subtitle {
+    gap: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.hero__subtitle::before,
+.about__subtitle::before,
+.services__subtitle::before,
+.benefits__subtitle::before,
+.team__subtitle::before,
+.gallery__subtitle::before {
+    content: '';
+    width: 60px;
+    height: 1px;
+    background-color: currentColor;
+}
+
+.social {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.social__item {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: $whiteColor;
+}
+
+.social__link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: $primaryTextColor;
+    transition: fill $duration $timingFunction;
+
+    &:hover,
+    &:focus {
+        fill: $accentColor;
+    }
+}

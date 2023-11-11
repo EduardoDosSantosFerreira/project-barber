@@ -1,0 +1,126 @@
+.mobile-menu {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    transform: translateX(100%);
+    transition: transform $duration $timingFunction;
+    overflow-y: scroll;
+    background-color: $heroGradient;
+}
+
+.mobile-menu__container {
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 48px 31px 48px 40px;
+    overflow: auto;
+    background-color: $whiteColor;
+}
+
+.mobile-menu.is-open {
+    transform: translateX(0);
+}
+
+.close-mobile-menu {
+    display: block;
+    margin-left: auto;
+    background-color: transparent;
+    border: none;
+}
+
+.icon-mobile-menu--close {
+    fill: $primaryTextColor;
+}
+
+.mobile-menu__nav {
+    margin-bottom: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.nav__link {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: calc(25 / 18);
+    letter-spacing: 0.1em;
+    color: $primaryTextColor;
+    transition: color $duration $timingFunction;
+
+    &:hover,
+    &:focus {
+        color: $accentColor;
+    }
+}
+
+.mobile-menu__contact {
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.mobile-menu__phone {
+    font-size: 18px;
+    line-height: calc(25 / 18);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $primaryTextColor;
+    transition: color $duration $timingFunction;
+
+    &:hover,
+    &:focus {
+        color: $accentColor;
+    }
+}
+
+.mobile-menu__button {
+    width: 194px;
+    color: $primaryTextColor;
+    transition: color $duration $timingFunction,
+    background-color $duration $timingFunction;
+
+    &:hover,
+    &:focus {
+        color: $whiteColor;
+        background-color: $accentColor;
+    }
+}
+
+.mobile-menu__social {
+    position: relative;
+    padding-left: 100px;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.mobile-menu__social::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 60px;
+    height: 1px;
+    background-color: currentColor;
+}
+
+.mobile-social__link {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: calc(19 / 14);
+    letter-spacing: 0.2em;
+    color: $primaryTextColor;
+    transition: color $duration $timingFunction;
+
+    &:hover,
+    &:focus {
+        color: $accentColor;
+    }
+}

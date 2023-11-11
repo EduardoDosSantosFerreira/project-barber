@@ -1,0 +1,103 @@
+.benefits {
+    background-color: $whiteColor;
+}
+
+.benefits__container {
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+        max-width: 418px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        width: 690px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    }
+}
+
+.benefits__wrap {
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 44px;
+    }
+
+    @media screen and (min-width: 768px) {
+        max-width: 500px;
+        padding-top: 9px;
+    }
+}
+
+.benefits__subtitle {
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.benefits__title {
+    margin-bottom: 20px;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.17;
+    letter-spacing: 0.05em;
+}
+
+.benefits__description {
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    color: $secondaryTextColor;
+}
+
+.benefits__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-left: 240px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 370px;
+    }
+}
+
+.benefits__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 24px;
+    width: calc((100% - 30px) / 2);
+    text-align: center;
+    background-color: $sectionBgColor;
+}
+
+.benefits__item:nth-child(odd) {
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.benefits__item:nth-child(even) {
+    margin-top: 30px;
+}
+
+.benefits__number {
+    margin-bottom: 6px;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.36;
+    letter-spacing: 0.05em;
+}
+
+.benefits__number::after {
+    content: '+';
+    font-size: 16px;
+    color: $accentColor;
+    vertical-align: top;
+}
+
+.benefits__text {
+    font-weight: 600;
+}

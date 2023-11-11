@@ -1,0 +1,113 @@
+.hero__container {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        background: #555555;
+
+    }
+}
+
+.hero__soc {
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+
+    @media screen and (min-width: 768px) {
+        position: absolute;
+        bottom: 0;
+        width: 120px;
+        padding-left: 37px;
+        padding-bottom: 40px;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 100px;
+        padding-left: 27px;
+    }
+}
+
+.hero__list {
+    display: flex;
+    gap: 40px;
+    transform: rotate(-90deg) translateY(100%);
+    transform-origin: bottom left;
+    align-items: center;
+}
+
+.hero__list::before {
+    content: '';
+    width: 60px;
+    height: 1px;
+    background-color: currentColor;
+}
+
+.hero__link {
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    transition: color $duration $timingFunction;
+
+    &:hover,
+    &:focus {
+        color: $accentColor;
+    }
+}
+
+.hero__wrap {
+    @media screen and (max-width: 767px) {
+    padding-top: 208px;
+    padding-bottom: 209px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .hero__wrap {
+        height: 680px;
+        flex-grow: 1;
+        padding: 272px 100px 208px 100px;
+        // background-color: $subtitleColor;
+    }
+}
+
+.hero__text {
+    position: relative;
+    z-index: 10;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        position: absolute;
+        top: 40%;
+        left: 35%;
+    }
+
+    @media screen and (min-width: 1200px) {
+        left: 10%;
+    }
+}
+
+.hero__subtitle {
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $subtitleColor;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        justify-content: center;
+    }
+}
+
+.hero__title {
+    margin-bottom: 20px;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.17;
+    letter-spacing: 0.05em;
+    color: $whiteColor;
+}
+
+.hero__description {
+    font-size: 16px;
+    line-height: 1.62;
+    letter-spacing: 0.02em;
+    color: $additionalTextColor;
+}
