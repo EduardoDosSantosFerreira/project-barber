@@ -1,0 +1,119 @@
+.booking {
+    @media screen and (min-width: 1200px) {
+        width: calc(50% - 15px);
+    }
+}
+
+.booking__title {
+    margin-bottom: 44px;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.17;
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: $whiteColor;
+
+    @media screen and (min-width: 768px) {
+        text-align: left;
+    }
+}
+
+.booking__form {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+.form__field {
+    margin-bottom: 44px;
+}
+
+.form__input {
+    width: 100%;
+    padding-bottom: 8px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $whiteColor;
+    background-color: transparent;
+    border: none;
+    resize: none;
+    border-bottom: 1px solid $footerLineColor;
+    transition: color $duration $timingFunction,
+    border-color $duration $timingFunction;
+
+    @media screen and (min-width: 768px) {
+        width: 330px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 270px;
+    }
+}
+
+.form__textarea {
+    width: 100%;
+    padding-bottom: 8px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $whiteColor;
+    background-color: transparent;
+    border: none;
+    resize: none;
+    border-bottom: 1px solid $footerLineColor;
+    transition: color $duration $timingFunction,
+        border-color $duration $timingFunction;
+}
+
+.booking__textarea {
+    @media screen and (min-width: 768px) {
+        width: 100%;
+    }
+}
+
+.form__textarea:focus,
+.form__input:focus {
+    border-color: $whiteColor;
+}
+
+.form__textarea::placeholder,
+.form__input::placeholder {
+    transition: color $duration $timingFunction;
+}
+
+.form__input:focus::placeholder,
+.form__textarea:focus::placeholder {
+    color: $whiteColor;
+}
+
+.form__button {
+    display: block;
+    min-width: 160px;
+    height: 40px;
+    margin: 0 auto;
+    padding: 12px 38px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: calc(16 / 12);
+    text-align: center;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: $whiteColor;
+    background-color: transparent;
+    border: 1px solid $accentColor;
+    border-radius: 25px;
+    transition: background-color $duration $timingFunction;
+
+    @media screen and (min-width: 768px) {
+        margin: 0;
+    }
+}
+
+.form__button:hover,
+.form__button:focus {
+    background-color: $accentColor
+}
